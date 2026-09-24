@@ -36,10 +36,18 @@ export function Footer() {
           <h4 className="uppercase tracking-widest text-xs mb-4 text-[#d9b78a]">
             Suivez l’aventure
           </h4>
-          <a className="inline-flex gap-2 items-center" href="/">
-            {" "}
-            <Camera size={20} /> Instagram
-          </a>
+          <div className="flex flex-col items-start gap-3">
+            <a className="inline-flex gap-2 items-center" href="/">
+              <Camera size={20} /> Instagram
+            </a>
+            <a
+              className="inline-flex gap-2 items-center"
+              href="/"
+              aria-label="Facebook MLC Head Spa"
+            >
+              <FacebookIcon /> Facebook
+            </a>
+          </div>
           <p className="mt-5 text-sm text-[#d9c9b7]">
             Les informations pratiques et les disponibilités seront annoncées
             prochainement.
@@ -58,5 +66,19 @@ export function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+function FacebookIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path d="M13.5 21v-8h2.75l.4-3h-3.15V8.1c0-.87.24-1.46 1.5-1.46h1.78V3.96c-.31-.04-1.38-.14-2.63-.14-2.61 0-4.4 1.59-4.4 4.51V10H7v3h2.75v8h3.75Z" />
+    </svg>
   );
 }
