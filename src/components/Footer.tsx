@@ -1,4 +1,4 @@
-import { Camera, Mail, MapPin, Phone } from "lucide-react";
+import { Camera, Heart, Mail, MapPin, Phone } from "lucide-react";
 import { contact } from "../data/site";
 export function Footer() {
   return (
@@ -47,7 +47,15 @@ export function Footer() {
         </div>
       </div>
       <div className="container border-t border-[#806b59] mt-10 pt-5 text-xs text-[#cbbbaa]">
-        © {new Date().getFullYear()} MLC Head Spa · Tous droits réservés
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <span>© {new Date().getFullYear()} MLC Head Spa · Tous droits réservés</span>
+          <span className="text-[#d9c9b7]">
+            Fait avec <Heart className="inline text-red-400 mx-1" size={13} fill="currentColor" /> par Aven Web
+          </span>
+          <a href="#mentions-legales" className="hover:text-[#f8f1e8] transition">
+            Mentions légales
+          </a>
+        </div>
       </div>
     </footer>
   );
