@@ -1,6 +1,6 @@
 export const contact = {
-  phone: "06 83 01 66 38",
-  email: "bonjour@mlc-headspa.fr",
+  phone: "06 80 46 10 76",
+  email: "Mlcheaspa@gmail.com",
   address: "Adresse communiquée prochainement",
   opening: "Janvier 2027",
 };
