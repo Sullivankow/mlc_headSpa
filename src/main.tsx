@@ -14,9 +14,14 @@ export default function App() {
 
     useEffect(() => {
         const handleHashChange = () => {
-            setIsLegalPage(window.location.hash === "#mentions-legales");
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            const nextIsLegalPage = window.location.hash === "#mentions-legales";
+            setIsLegalPage(nextIsLegalPage);
+
+            if (nextIsLegalPage) {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
         };
+
         window.addEventListener("hashchange", handleHashChange);
         return () => window.removeEventListener("hashchange", handleHashChange);
     }, []);
