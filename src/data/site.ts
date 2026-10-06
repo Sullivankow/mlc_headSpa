@@ -1,7 +1,7 @@
 export const contact = {
   phone: "06 80 46 10 76",
   email: "Mlcheadspa@gmail.com",
-  address: "Adresse communiquée prochainement",
+  address: "2 rue de Saintonge, 17120 Boutenac-Touvent",
   opening: "Janvier 2027",
 };
 export const rituals = [
