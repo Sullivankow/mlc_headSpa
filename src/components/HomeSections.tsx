@@ -46,11 +46,11 @@ function HeroSection() {
                         <br />
                         <span className="gold">Le plaisir de prendre soin.</span>
                     </h1>
-                    <p className="text-lg text-[#76665a] max-w-lg leading-relaxed mb-8">
+                    <p className="text-lg text-[#687064] max-w-lg leading-relaxed mb-8">
                         Un cocon de douceur dédié au cuir chevelu, aux massages et à
                         l’équilibre intérieur.
                     </p>
-                    <div className="inline-flex items-center gap-3 rounded-full bg-[#a77b43] text-white px-6 py-3 text-sm">
+                    <div className="inline-flex items-center gap-3 rounded-full bg-[#68764f] text-white px-6 py-3 text-sm">
                         Ouverture prochaine en janvier 2027 <Sparkles size={17} />
                     </div>
                 </div>
@@ -102,7 +102,7 @@ function ExperienceSection() {
 
 function RitualsSection() {
     return (
-        <section id="rituels" className="section bg-[#f0e6da]">
+        <section id="rituels" className="section bg-[#edf0e5]">
             <div className="container">
                 <SectionTitle
                     eyebrow="Nos rituels"
@@ -113,21 +113,21 @@ function RitualsSection() {
                     {rituals.map((ritual, index) => (
                         <article
                             key={ritual.name}
-                            className="bg-[#fbf6ef] p-8 rounded-[2rem] border border-[#cbb79e]/50"
+                            className="bg-[#f8f7f0] p-8 rounded-[2rem] border border-[#c7cfb8]/50"
                         >
                             <p className="gold text-sm mb-4">0{index + 1}</p>
                             <h3 className="serif text-3xl mb-3">{ritual.name}</h3>
-                            <p className="text-[#76665a] min-h-20 leading-relaxed">
+                            <p className="text-[#687064] min-h-20 leading-relaxed">
                                 {ritual.desc}
                             </p>
-                            <div className="border-t border-[#cbb79e]/50 mt-6 pt-5 flex justify-between text-sm">
+                            <div className="border-t border-[#c7cfb8]/50 mt-6 pt-5 flex justify-between text-sm">
                                 <span>{ritual.duration}</span>
                                 <strong>{ritual.price}</strong>
                             </div>
                         </article>
                     ))}
                 </div>
-                <p className="text-center text-sm text-[#76665a] mt-8">
+                <p className="text-center text-sm text-[#687064] mt-8">
                     Tarifs et prestations définitifs communiqués avant l’ouverture.
                 </p>
             </div>
@@ -144,9 +144,9 @@ function FaqSection() {
                     title="Tout savoir avant votre pause"
                     text="Quelques réponses pour vous aider à préparer votre première expérience chez MLC Head Spa."
                 />
-                <div className="max-w-3xl mx-auto border-t border-[#cbb79e]/60">
+                <div className="max-w-3xl mx-auto border-t border-[#c7cfb8]/60">
                     {faqs.map((faq) => (
-                        <details key={faq.question} className="group border-b border-[#cbb79e]/60">
+                        <details key={faq.question} className="group border-b border-[#c7cfb8]/60">
                             <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-left serif text-xl [&::-webkit-details-marker]:hidden">
                                 {faq.question}
                                 <ChevronDown
@@ -154,7 +154,7 @@ function FaqSection() {
                                     size={20}
                                 />
                             </summary>
-                            <p className="max-w-2xl pb-5 pr-10 text-[#76665a] leading-relaxed">
+                            <p className="max-w-2xl pb-5 pr-10 text-[#687064] leading-relaxed">
                                 {faq.answer}
                             </p>
                         </details>
@@ -167,14 +167,14 @@ function FaqSection() {
 
 function ContactSection() {
     return (
-        <section id="contact" className="section bg-[#e7d6c2]/45">
+        <section id="contact" className="section bg-[#e4e9da]/55">
             <div className="container grid md:grid-cols-[1fr_1.2fr] gap-12 items-center">
                 <SectionTitle
                     eyebrow="Restons en contact"
                     title="Votre parenthèse commence ici"
                     text="MLC Head Spa ouvrira ses portes en janvier 2027. Contactez-nous pour recevoir les prochaines informations et être informé de l’ouverture des réservations."
                 />
-                <div className="bg-[#fbf6ef] rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#cbb79e]/50">
+                <div className="bg-[#f8f7f0] rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#c7cfb8]/50">
                     <p className="uppercase tracking-[.25em] text-xs gold font-semibold mb-6">
                         Informations pratiques
                     </p>
@@ -197,8 +197,8 @@ function ContactSection() {
                             value={contact.address}
                         />
                     </div>
-                    <div className="border-t border-[#cbb79e]/60 mt-8 pt-6 text-sm text-[#76665a]">
-                        Ouverture prévue en <strong className="text-[#3f3026]">{contact.opening}</strong>
+                    <div className="border-t border-[#c7cfb8]/60 mt-8 pt-6 text-sm text-[#687064]">
+                        Ouverture prévue en <strong className="text-[#344238]">{contact.opening}</strong>
                     </div>
                 </div>
             </div>
@@ -222,7 +222,7 @@ function ContactDetail({
             <span className="contact-icon">{icon}</span>
             <span>
                 <strong className="block mb-1">{label}</strong>
-                <span className="text-[#76665a] group-hover:text-[#a77b43] transition">
+                <span className="text-[#687064] group-hover:text-[#68764f] transition">
                     {value}
                 </span>
             </span>
@@ -249,11 +249,11 @@ function Feature({
 }) {
     return (
         <div className="text-center p-6">
-            <div className="mx-auto mb-5 w-14 h-14 rounded-full bg-[#e7d6c2] flex items-center justify-center gold">
+            <div className="mx-auto mb-5 w-14 h-14 rounded-full bg-[#e4e9da] flex items-center justify-center gold">
                 {icon}
             </div>
             <h3 className="serif text-2xl mb-3">{title}</h3>
-            <p className="text-[#76665a] leading-relaxed">{text}</p>
+            <p className="text-[#687064] leading-relaxed">{text}</p>
         </div>
     );
 }

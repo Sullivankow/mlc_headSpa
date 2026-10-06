@@ -14,6 +14,6 @@ npm run dev
 - Coordonnées : `src/data/site.ts`
 - Sections : `src/main.tsx`
 - Composants : `src/components/`
-- Logo : `src/assets/logo.jpeg`
+- Logo : `src/assets/logo3.png`
 
 Le site est front-end uniquement. Le bouton WhatsApp a été retiré ; les coordonnées sont présentées dans le footer.

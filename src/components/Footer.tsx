@@ -2,12 +2,12 @@ import { Camera, Heart, Mail, MapPin, Phone } from "lucide-react";
 import { contact } from "../data/site";
 export function Footer() {
   return (
-    <footer id="contact" className="bg-[#3f3026] text-[#f8f1e8] section !pb-6">
+    <footer id="contact" className="bg-[#344238] text-[#f5f5ec] section !pb-6">
       <div className="container grid md:grid-cols-3 gap-10">
         <div>
           <h3 className="serif text-3xl mb-3">MLC Head Spa</h3>
-          <p className="text-[#d9c9b7]">Détente · Soin · Bien-être</p>
-          <p className="mt-5 text-sm text-[#d9c9b7]">
+          <p className="text-[#d8dfd0]">Détente · Soin · Bien-être</p>
+          <p className="mt-5 text-sm text-[#d8dfd0]">
             Ouverture prochaine en janvier 2027.
           </p>
         </div>
@@ -54,21 +54,21 @@ export function Footer() {
           </p>
         </div>
       </div>
-      <div className="container border-t border-[#806b59] mt-10 pt-5 text-xs text-[#cbbbaa]">
+      <div className="container border-t border-[#71806a] mt-10 pt-5 text-xs text-[#cbd3c2]">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <span>© {new Date().getFullYear()} MLC Head Spa · Tous droits réservés</span>
-          <span className="text-[#d9c9b7]">
+          <span className="text-[#d8dfd0]">
             Fait avec <Heart className="inline text-red-400 mx-1" size={13} fill="currentColor" /> par{" "}
             <a
               href="https://www.facebook.com/AvenWebSully"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[#f8f1e8] transition"
+              className="hover:text-[#f5f5ec] transition"
             >
               Aven Web
             </a>
           </span>
-          <a href="#mentions-legales" className="hover:text-[#f8f1e8] transition">
+          <a href="#mentions-legales" className="hover:text-[#f5f5ec] transition">
             Mentions légales
           </a>
         </div>

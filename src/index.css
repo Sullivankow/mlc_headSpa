@@ -1,25 +1,25 @@
 @import "tailwindcss";
 :root {
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  color: #3f3026;
-  background: #fbf6ef;
+  color: #344238;
+  background: #f8f7f0;
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 7rem;
 }
 body {
   margin: 0;
 }
 section[id],
 [id] {
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 7rem;
 }
 .serif {
   font-family: Georgia, "Times New Roman", serif;
 }
 .gold {
-  color: #a77b43;
+  color: #68764f;
 }
 .section {
   padding: 5rem 1.25rem;
@@ -36,6 +36,6 @@ section[id],
   height: 2.5rem;
   flex: none;
   border-radius: 9999px;
-  background: #e7d6c2;
-  color: #a77b43;
+  background: #e4e9da;
+  color: #68764f;
 }
