@@ -21,7 +21,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.cluster129.hosting.ovh.net
-        username: lasau
+        username: mlcheal
         password: ${{ secrets.ftp_password }}
         exclude: |
           **/.git*
