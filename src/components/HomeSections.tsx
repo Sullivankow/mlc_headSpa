@@ -1,6 +1,7 @@
 import {
     ArrowDown,
     ChevronDown,
+    Gift,
     Heart,
     Leaf,
     Mail,
@@ -8,6 +9,7 @@ import {
     Phone,
     Sparkles,
 } from "lucide-react";
+import { useState } from "react";
 import { SectionTitle } from "./SectionTitle";
 import { contact, faqs, rituals } from "../data/site";
 
@@ -30,7 +32,7 @@ function HeroSection() {
     return (
         <section
             id="accueil"
-            className="min-h-screen pt-20 flex items-center relative overflow-hidden"
+            className="min-h-screen pt-44 flex items-center relative overflow-hidden"
         >
             <div
                 className="absolute inset-0 bg-cover bg-center opacity-25"
@@ -109,7 +111,7 @@ function RitualsSection() {
                     title="Des parenthèses sur mesure"
                     text="Découvrez prochainement nos expériences Head Spa, pensées comme de véritables invitations à ralentir."
                 />
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
                     {rituals.map((ritual, index) => (
                         <article
                             key={ritual.name}
@@ -126,12 +128,59 @@ function RitualsSection() {
                             </div>
                         </article>
                     ))}
+                    <article className="grid w-full overflow-hidden rounded-[2rem] border border-[#c7cfb8]/50 bg-[#f8f7f0] md:col-span-2 md:grid-cols-[0.9fr_1.1fr]">
+                        <img
+                            src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=1200&q=85"
+                            alt="Cadeau de Noël emballé avec un ruban"
+                            className="h-56 w-full object-cover md:h-full md:min-h-72"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                        <div className="p-7 md:p-8">
+                            <p className="gold mb-3 text-sm">Pour les fêtes de Noël</p>
+                            <h3 className="serif mb-3 text-3xl">Offrez une carte cadeau</h3>
+                            <p className="mb-6 leading-relaxed text-[#687064]">
+                                Faites plaisir à vos proches avec une parenthèse Head Spa. Anticipez dès maintenant une réservation avant notre ouverture en janvier 2027.
+                            </p>
+                            <GiftCardContactButton />
+                        </div>
+                    </article>
                 </div>
-                <p className="text-center text-sm text-[#687064] mt-8">
-                    Tarifs et prestations définitifs communiqués avant l’ouverture.
-                </p>
             </div>
         </section>
+    );
+}
+
+function GiftCardContactButton() {
+    const [phoneVisible, setPhoneVisible] = useState(false);
+
+    return (
+        <>
+            <button
+                className="inline-flex items-center gap-2 rounded-full bg-[#68764f] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#566342] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#68764f]"
+                type="button"
+                aria-expanded={phoneVisible}
+                aria-controls="gift-card-phone"
+                onClick={() => setPhoneVisible(!phoneVisible)}
+            >
+                <Gift size={17} aria-hidden="true" />
+                {phoneVisible ? "Masquer le numéro" : "Demander une carte cadeau"}
+            </button>
+            {phoneVisible && (
+                <div id="gift-card-phone" className="mt-5" aria-live="polite">
+                    <p className="mb-1 text-sm text-[#687064]">
+                        Appelez-nous pour votre carte cadeau et anticiper une réservation :
+                    </p>
+                    <a
+                        className="inline-flex items-center gap-2 font-semibold text-[#344238] hover:text-[#68764f]"
+                        href={`tel:${contact.phone.replaceAll(" ", "")}`}
+                    >
+                        <Phone size={17} aria-hidden="true" />
+                        {contact.phone}
+                    </a>
+                </div>
+            )}
+        </>
     );
 }
 

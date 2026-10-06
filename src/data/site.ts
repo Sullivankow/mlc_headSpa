@@ -6,22 +6,16 @@ export const contact = {
 };
 export const rituals = [
   {
-    name: "Rituel Éveil",
-    duration: "30 min",
-    price: "À partir de 45 €",
-    desc: "Une parenthèse courte pour relâcher les tensions et réveiller les sens.",
-  },
-  {
-    name: "Rituel Harmonie",
-    duration: "45 min",
-    price: "À partir de 65 €",
-    desc: "Un soin complet mêlant détente du cuir chevelu, massages et lâcher-prise.",
-  },
-  {
-    name: "Rituel Signature",
+    name: "Rituel 1 heure",
     duration: "1 h",
-    price: "À partir de 85 €",
-    desc: "Une expérience immersive et enveloppante pour une déconnexion profonde.",
+    price: "100 €",
+    desc: "Une parenthèse de détente pour relâcher les tensions et prendre soin de soi.",
+  },
+  {
+    name: "Rituel 1 h 30",
+    duration: "1 h 30",
+    price: "120 €",
+    desc: "Une expérience prolongée et enveloppante pour une déconnexion profonde.",
   },
 ];
 export const faqs = [

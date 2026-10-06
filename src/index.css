@@ -6,14 +6,60 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 7rem;
+  scroll-padding-top: 10rem;
 }
 body {
   margin: 0;
 }
 section[id],
 [id] {
-  scroll-margin-top: 7rem;
+  scroll-margin-top: 10rem;
+}
+.gift-top-bar {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 2.75rem;
+  align-items: center;
+  overflow: hidden;
+  background: #344238;
+  color: #f8f7f0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.gift-top-bar__track {
+  display: flex;
+  width: max-content;
+  min-width: 200%;
+  animation: gift-announcement-scroll 32s linear infinite;
+}
+.gift-top-bar__message {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: none;
+  padding-right: 3rem;
+}
+.gift-top-bar:hover .gift-top-bar__track,
+.gift-top-bar:focus-visible .gift-top-bar__track {
+  animation-play-state: paused;
+}
+@keyframes gift-announcement-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gift-top-bar__track {
+    animation: none;
+    min-width: 0;
+  }
+  .gift-top-bar__track span + span {
+    display: none;
+  }
 }
 .serif {
   font-family: Georgia, "Times New Roman", serif;
