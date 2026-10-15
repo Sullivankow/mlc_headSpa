@@ -1,4 +1,5 @@
 import { ArrowLeft } from "lucide-react";
+import { contact } from "../data/site";
 import { SectionTitle } from "./SectionTitle";
 
 export function LegalNotice() {
@@ -23,7 +24,7 @@ export function LegalNotice() {
                             <p>Entreprise individuelle - données administratives provisoires</p>
                             <p>Responsable de la publication : Marie Laurent</p>
                             <p>Adresse : 12 rue des Étoiles, 69000 Lyon</p>
-                            <p>Téléphone : 06 80 46 10 76</p>
+                            <p>Téléphone : {contact.phone}</p>
                             <p>E-mail : Mlcheaspa@gmail.com</p>
                         </LegalBlock>
                         <LegalBlock title="Hébergement">

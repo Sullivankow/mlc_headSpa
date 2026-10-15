@@ -1,21 +1,21 @@
 export const contact = {
-  phone: "06 80 46 10 76",
+  phone: "07 62 71 61 18",
   email: "Mlcheadspa@gmail.com",
   address: "2 rue de Saintonge, 17120 Boutenac-Touvent",
   opening: "Janvier 2027",
 };
 export const rituals = [
   {
-    name: "Rituel 1 heure",
-    duration: "1 h",
-    price: "100 €",
-    desc: "Une parenthèse de détente pour relâcher les tensions et prendre soin de soi.",
+    name: "Rituel adulte",
+    duration: "1 h 30",
+    price: "150 €",
+    desc: "Une expérience prolongée et enveloppante pour une déconnexion profonde.",
   },
   {
-    name: "Rituel 1 h 30",
+    name: "Rituel enfant",
     duration: "1 h 30",
     price: "120 €",
-    desc: "Une expérience prolongée et enveloppante pour une déconnexion profonde.",
+    desc: "Un moment de détente adapté aux enfants pour prendre soin de soi en douceur.",
   },
 ];
 export const faqs = [
