@@ -7,7 +7,12 @@ export function GiftTopBar() {
     return (
         <a className="gift-top-bar" href="#contact">
             <Gift size={15} aria-hidden="true" />
-            <span>{announcement}</span>
+            <span className="gift-top-marquee">
+                <span className="gift-top-track">
+                    <span>{announcement}</span>
+                    <span aria-hidden="true">{announcement}</span>
+                </span>
+            </span>
             <Star size={13} className="gift-top-star" fill="currentColor" aria-hidden="true" />
             <span className="gift-top-cta">En savoir plus <ArrowRight size={14} /></span>
         </a>

@@ -63,6 +63,30 @@ a {
   line-height: 1.4;
   text-decoration: none;
 }
+.gift-top-marquee {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.gift-top-track {
+  display: flex;
+  width: max-content;
+  animation: gift-top-scroll 24s linear infinite;
+}
+.gift-top-track > span {
+  flex: none;
+  padding-right: 3rem;
+}
+.gift-top-bar:hover .gift-top-track,
+.gift-top-bar:focus-visible .gift-top-track {
+  animation-play-state: paused;
+}
+@keyframes gift-top-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
 .gift-top-bar > svg:first-child,
 .gift-top-star {
   flex: none;
