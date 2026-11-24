@@ -1,19 +1,35 @@
-# MLC Head Spa — site vitrine
+# MLC Head Spa
 
-Projet React + Vite + TypeScript + Tailwind CSS, organisé en composants.
+Site vitrine construit avec React, TypeScript, Vite et Tailwind CSS.
 
-## Lancer le projet
+## Prérequis
+
+- Node.js 22.12 ou supérieur
+- npm
+
+## Développement
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-## Personnalisation
+## Vérification et production
 
-- Coordonnées : `src/data/site.ts`
-- Sections : `src/main.tsx`
-- Composants : `src/components/`
-- Logo : `src/assets/logo3.png`
+```bash
+npm run build
+npm run preview
+```
 
-Le site est front-end uniquement. Le bouton WhatsApp a été retiré ; les coordonnées sont présentées dans le footer.
+La commande `build` lance le contrôle TypeScript puis génère le site optimisé dans `dist/`.
+
+## Organisation du code
+
+- `src/main.tsx` : point d’entrée React et affichage des mentions légales selon le fragment d’URL.
+- `src/components/` : navigation, pied de page, sections de la page d’accueil et composants partagés.
+- `src/data/site.ts` : coordonnées, textes, rituels, tarifs, produits et FAQ.
+- `src/assets/` : images importées par le code ; Vite les versionne et les copie dans le build de production.
+- `index.html` : métadonnées et structure HTML initiale.
+- `.github/workflows/main.yml` : déploiement automatique après un push ; le secret GitHub `ftp_password` doit être configuré.
+
+Le site est front-end uniquement. Le bouton WhatsApp est affiché sur les pages et génère un lien de contact à partir du numéro défini dans `src/data/site.ts`.

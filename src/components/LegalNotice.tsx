@@ -16,16 +16,16 @@ export function LegalNotice() {
                     <SectionTitle
                         eyebrow="Informations légales"
                         title="Mentions légales"
-                        text="Les informations ci-dessous sont provisoires et seront mises à jour avant l’ouverture du site."
+                        text="Informations relatives à l’activité et à l’édition du site MLC Head Spa."
                     />
                     <div className="space-y-8 text-[#687064] leading-relaxed">
                         <LegalBlock title="Éditeur du site">
                             <p><strong className="text-[#344238]">MLC Head Spa</strong></p>
-                            <p>Entreprise individuelle - données administratives provisoires</p>
+                            <p>SIRET : 79107636700022</p>
                             <p>Responsable de la publication : Marie Laurent</p>
-                            <p>Adresse : 12 rue des Étoiles, 69000 Lyon</p>
+                            <p>Adresse : {contact.address}</p>
                             <p>Téléphone : {contact.phone}</p>
-                            <p>E-mail : Mlcheaspa@gmail.com</p>
+                            <p>E-mail : {contact.email}</p>
                         </LegalBlock>
                         <LegalBlock title="Hébergement">
                             <p><strong className="text-[#344238]">Vercel Inc.</strong></p>

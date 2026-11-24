@@ -2,7 +2,7 @@ import { Camera, Heart, Mail, MapPin, Phone } from "lucide-react";
 import { contact } from "../data/site";
 export function Footer() {
   return (
-    <footer id="contact" className="bg-[#344238] text-[#f5f5ec] section !pb-6">
+    <footer className="bg-[#344238] text-[#f5f5ec] section !pb-6">
       <div className="container grid md:grid-cols-3 gap-10">
         <div>
           <h3 className="serif text-3xl mb-3">MLC Head Spa</h3>
@@ -37,7 +37,12 @@ export function Footer() {
             Suivez l’aventure
           </h4>
           <div className="flex flex-col items-start gap-3">
-            <a className="inline-flex gap-2 items-center" href="/">
+            <a
+              className="inline-flex gap-2 items-center"
+              href="https://www.instagram.com/mlcheadspa?lqvp=MWNnZW5na2ZqaWc5aQ=="
+              target="_blank"
+              rel="noreferrer"
+            >
               <Camera size={20} /> Instagram
             </a>
             <a
